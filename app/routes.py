@@ -1,5 +1,5 @@
 from flask import Flask, request
-from database import datetime
+from datetime import datetime
 from app.database import task
 
 
@@ -31,13 +31,13 @@ def get_task_by_id(pk):
     }
     return out
 
-@app.put("tasks/<int:pk>")
+@app.put("/tasks/<int:pk>")
 def update_task_by_id(pk):
     raw_data = request.json
     task.update_by_id(pk, raw_data)
     return "", 204
 
-@app.delete("tasks/<int:pk>")
+@app.delete("/tasks/<int:pk>")
 def delete_task_by_id(pk):
     task.delete_by_id(pk)
     return "", 204

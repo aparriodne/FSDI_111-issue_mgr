@@ -1,0 +1,1 @@
+# resp = requests.delete(myurl)
