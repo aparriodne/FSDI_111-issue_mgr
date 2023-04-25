@@ -12,6 +12,7 @@ def output_formatter(results):
         }
         out.append(result_dict)
         return out
+    
 
 def select_by_id(task_id):
     conn = get_db()
