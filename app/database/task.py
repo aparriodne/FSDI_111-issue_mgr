@@ -11,7 +11,7 @@ def output_formatter(results):
             "is_done": result[3],
         }
         out.append(result_dict)
-        return out
+    return out
     
 
 def select_by_id(task_id):
