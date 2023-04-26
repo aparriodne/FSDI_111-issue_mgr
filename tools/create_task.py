@@ -9,9 +9,11 @@ def create_task(summary, description):
     }
     response = requests.post(URL, json=new_task)
     if response.status_code == 201:
-        print("Task successfully created1")
+        print("Task successfully created!")
     else:
-        print("Something went wronwhile trying to create task.")
+        print("Something went wrong while trying to create task.")
 
 if __name__ == "__main__":
+    print("Testing POST /tasks")
+    print("---------------------")
     create_task("Test my service","Validate the system works")
